@@ -36,6 +36,46 @@ func (m *Repository) Home(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, "home.page.html", &models.TemplateData{})
 }
 
+// Contact page handler
+func (m *Repository) Contact(w http.ResponseWriter, r *http.Request) {
+	remoteIP := r.RemoteAddr
+	m.App.Session.Put(r.Context(), "remote_ip", remoteIP)
+
+	render.RenderTemplate(w, "contact.page.html", &models.TemplateData{})
+}
+
+// Esimi page handler
+func (m *Repository) Esimi(w http.ResponseWriter, r *http.Request) {
+	remoteIP := r.RemoteAddr
+	m.App.Session.Put(r.Context(), "remote_ip", remoteIP)
+
+	render.RenderTemplate(w, "esimi.page.html", &models.TemplateData{})
+}
+
+// Lavinda page handler
+func (m *Repository) Lavinda(w http.ResponseWriter, r *http.Request) {
+	remoteIP := r.RemoteAddr
+	m.App.Session.Put(r.Context(), "remote_ip", remoteIP)
+
+	render.RenderTemplate(w, "lavinda.page.html", &models.TemplateData{})
+}
+
+// Reservattion takes you to the reservation page
+func (m *Repository) Reservastion(w http.ResponseWriter, r *http.Request) {
+	remoteIP := r.RemoteAddr
+	m.App.Session.Put(r.Context(), "remote_ip", remoteIP)
+
+	render.RenderTemplate(w, "reservation.page.html", &models.TemplateData{})
+}
+
+// Omocha page handler
+func (m *Repository) Omoche(w http.ResponseWriter, r *http.Request) {
+	remoteIP := r.RemoteAddr
+	m.App.Session.Put(r.Context(), "remote_ip", remoteIP)
+
+	render.RenderTemplate(w, "omocha.page.html", &models.TemplateData{})
+}
+
 // About is the about page handler
 func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 	// perform some logic
@@ -50,3 +90,10 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 		StringMap: stringMap,
 	})
 }
+
+// func (m *Repository) Home(w http.ResponseWriter, r *http.Request) {
+// 	remoteIP := r.RemoteAddr
+// 	m.App.Session.Put(r.Context(), "remote_ip", remoteIP)
+
+// 	render.RenderTemplate(w, "home.page.html", &models.TemplateData{})
+// }

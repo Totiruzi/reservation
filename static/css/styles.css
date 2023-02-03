@@ -1,0 +1,21 @@
+.my-footer {
+  height: 5em;
+  margin-top: 1.5em;
+  padding: 1em;
+  font-size: 80%;
+  color: #ffffff;
+  background-color: #163b65;
+}
+
+/* After notie styles are applied to DOM: */
+.notie-container {
+  box-shadow: none;
+}
+
+.datepicker-picker {
+  z-index: 1000;
+}
+
+.swal2-action {
+  z-index: -100000;
+}
